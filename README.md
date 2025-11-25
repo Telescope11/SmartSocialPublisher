@@ -45,22 +45,25 @@
 -   **外部API**: 智谱AI API
 
 ## 📋 项目结构
-.
-├── app
-│ ├── src
-│ │ └── main
-│ │ ├── java/com/example/myapplication
-│ │ │ ├── MainActivity.kt # 主活动，包含所有核心逻辑
-│ │ │ └── ImageAdapter.kt # RecyclerView 适配器，用于图片列表
-│ │ ├── res
-│ │ │ ├── layout # 布局文件
-│ │ │ │ ├── activity_main.xml
-│ │ │ │ ├── item_image.xml
-│ │ │ │ └── dialog_bottom_sheet_list.xml
-│ │ │ └── values # 字符串、颜色等资源
-│ │ └── AndroidManifest.xml # 应用权限和组件声明
-│ └── build.gradle.kts # 模块级构建配置
-└── README.md # 项目说明文档
+
+本项目采用标准的Android Studio项目结构，主要文件和目录组织如下：
+
+*   **`app/`**：Android应用的核心模块。
+    *   **`src/main/`**：主要源代码集。
+        *   **`java/com/example/myapplication/`**：Kotlin源代码目录，存放所有业务逻辑。
+            *   `MainActivity.kt`：应用的主活动，包含所有核心功能逻辑。
+            *   `ImageAdapter.kt`：RecyclerView的适配器，用于管理和展示图片列表。
+        *   **`res/`**：应用资源目录。
+            *   **`layout/`**：存放所有XML界面布局文件。
+                *   `activity_main.xml`：主界面的布局文件。
+                *   `item_image.xml`：单个图片项的布局文件。
+                *   `dialog_bottom_sheet_list.xml`：底部弹窗列表的布局文件。
+            *   **`values/`**：存放应用中使用的常量资源，如字符串、颜色、尺寸等。
+        *   `AndroidManifest.xml`：应用的清单文件，用于声明应用的组件、权限等元数据。
+    *   **`build.gradle.kts`**：模块级别的构建脚本，定义该模块的依赖和配置。
+
+*   **`README.md`**：项目的主说明文档，即您正在阅读的文件。
+
 
 ## 🚀 快速开始
 
