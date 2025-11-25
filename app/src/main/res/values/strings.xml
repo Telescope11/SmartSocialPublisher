@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DouyinPublish</string>
+    <string name="add_topic"># 添加话题</string>
+    <string name="add_user">\@ 好友</string>
+</resources>

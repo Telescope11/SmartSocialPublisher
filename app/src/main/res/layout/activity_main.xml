@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F4F4"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!-- 顶部标题栏 -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/white"
+        app:title="发布图文"
+        app:titleTextColor="@android:color/black" />
+
+    <!-- 主要内容区域 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- 图片选择区域 -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewImages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:listitem="@layout/item_image" />
+
+            <!-- 文案编辑区域 -->
+            <EditText
+                android:id="@+id/editTextCaption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@null"
+                android:gravity="top|start"
+                android:hint="添加图文描述，让更多人看到你..."
+                android:inputType="textMultiLine|textCapSentences"
+                android:maxLength="500"
+                android:maxLines="8"
+                android:minHeight="120dp"
+                android:textColor="@android:color/black"
+                android:textColorHint="#9E9E9E"
+                android:textSize="16sp" />
+
+            <!-- 功能区域 (话题、@、位置) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textViewAddTopic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="@string/add_topic"
+                    android:textColor="#2196F3"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/textViewAddUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:padding="8dp"
+                    android:text="@string/add_user"
+                    android:textColor="#2196F3"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/textViewAddLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:padding="8dp"
+                    android:text=" 添加位置"
+                    android:textColor="#2196F3"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- 位置信息显示区域 -->
+            <TextView
+                android:id="@+id/textViewLocationInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"
+                tools:text="北京市朝阳区"
+                tools:visibility="visible" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 底部发布按钮和字数统计 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textViewCharCount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="0/500"
+            android:textColor="#9E9E9E"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/buttonPublish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FE2C55"
+            android:text="发布"
+            android:textColor="@android:color/white" />
+        <Button
+            android:id="@+id/buttonGenerateCaption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AI生成"
+            app:layout_constraintTop_toBottomOf="@id/editTextCaption"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
