@@ -10,7 +10,7 @@
 2.  **AI 智能文案生成**：集成智谱AI大语言模型，分析用户上传的图片，自动生成符合场景的趣味文案，极大地提升了创作效率和趣味性。
 
 ## 📱 应用截图
-![应用界面][D:\android_studio\APP\web.jpg]
+![应用界面](https://github.com/Telescope11/SmartSocialPublisher/blob/main/web.jpg)
 
 ## ✨ 主要功能
 
@@ -109,4 +109,4 @@
 ## 📧 联系方式
 
 -   项目链接: [https://github.com/Telescope11/SmartSocialPublisher](https://github.com/Telescope11/SmartSocialPublisher)
--   我的邮箱 : [telescope11@qq.com]
+-   我的邮箱 : (telescope11@qq.com)
